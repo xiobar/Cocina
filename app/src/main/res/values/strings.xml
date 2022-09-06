@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cocina</string>
+    <string name="libra">Libra a kilo</string>
+    <string name="gramo">Gramo a libra</string>
+    <string name="medida">medida</string>
+    <string name="medida_a_convertir">Medida a convertir</string>
+    <string name="taza">Taza a gramo</string>
+    <string name="redondear">redondear</string>
+    <string name="calcular">Calcular</string>
+</resources>

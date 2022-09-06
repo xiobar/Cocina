@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/medida_edit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/medida"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/medida_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medida_a_convertir"
+        app:layout_constraintStart_toStartOf="@id/medida_edit"
+        app:layout_constraintTop_toBottomOf="@id/medida_edit" />
+
+    <RadioGroup
+        android:id="@+id/peso_opcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/medida_text">
+
+        <RadioButton
+            android:id="@+id/libra_boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/libra"/>
+        <RadioButton
+            android:id="@+id/gramo_boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gramo"/>
+        <RadioButton
+            android:id="@+id/taza_boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taza"/>
+    </RadioGroup>
+    <Switch
+        android:id="@+id/redondear_valor"
+        android:text="@string/redondear"
+        android:layout_width="0dp"
+        android:checked="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peso_opcion"
+        app:layout_constraintStart_toStartOf="@id/peso_opcion"/>
+    <Button
+        android:id="@+id/calcular_boton"
+        android:text="@string/calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redondear_valor"/>
+    <TextView
+        android:id="@+id/resultado_peso"
+        tools:text="calculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/calcular_boton"
+        app:layout_constraintTop_toBottomOf="@id/calcular_boton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
